@@ -131,17 +131,17 @@
 
         <div class="image-container">
             <div class="character-card">
-                <img src="./images/dida.jpg" alt="Dida" class="image-item">
-                <button class="setting-button" onclick="confirmCharacter('dida')">디다 설정서 보기</button>
+                <img src="./images/dida.jpg" alt="디다" class="image-item">
+                <button class="setting-button" onclick="confirmCharacter('디다', 'dida')">디다 설정서 보기</button>
             </div>
         </div>
     </div>
 
     <script>
-    function confirmCharacter(character) {
-        const isConfirmed = confirm(`${character} 캐릭터의 설정서가 맞습니까?`);
+    function confirmCharacter(korName, fileName) {
+        const isConfirmed = confirm(`${korName} 캐릭터의 설정서가 맞습니까?`);
         if (isConfirmed) {
-            window.open(`${character}_setting.html`, '_blank');
+            window.open(`${fileName}_setting.html`, '_blank');
         }
     }
     </script>

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
-    <!-- Google Fonts - Gowun Batang -->
+    <title>머더미스터리 그림자찾기</title>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
@@ -12,8 +11,9 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             font-family: 'Gowun Batang', serif;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         .background-container {
@@ -50,6 +50,8 @@
             color: white;
             text-align: center;
             padding: 20px;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         h1 {
@@ -64,6 +66,56 @@
             line-height: 1.8;
             font-weight: 400;
             letter-spacing: 0.02em;
+            margin-bottom: 2em;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .image-item {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* PC */
+        @media screen and (min-width: 1024px) {
+            .image-item {
+                max-width: 600px;
+            }
+        }
+
+        /* 태블릿 */
+        @media screen and (max-width: 1023px) {
+            .image-item {
+                max-width: 450px;
+            }
+        }
+
+        /* 모바일 */
+        @media screen and (max-width: 767px) {
+            .image-item {
+                max-width: 300px;
+            }
+            .image-container {
+                gap: 20px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -78,8 +130,8 @@
         <h1>사전 인물 설정서 페이지</h1>
         <br>
         <p>※본인이 맡은 캐릭터의 설정서만 확인합니다.</p>
-    </div>
-     <div class="image-container">
+
+        <div class="image-container">
             <img src="./images/ash.jpg" alt="Ash" class="image-item">
             <img src="./images/bunny.jpg" alt="Bunny" class="image-item">
             <img src="./images/chald.jpg" alt="Chald" class="image-item">
@@ -87,6 +139,6 @@
             <img src="./images/eliza.jpg" alt="Eliza" class="image-item">
             <img src="./images/ford.jpg" alt="Ford" class="image-item">
         </div>
-     </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dida 설정서</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('./images/background.png') no-repeat center top fixed;
+            background-size: contain;
+            background-color: black;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .setting-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .setting-image {
+            width: 90%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .setting-image {
+                max-width: 600px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .setting-image {
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="setting-container">
+        <img src="./pdf/dida/dida_01.png" alt="Dida Setting 1" class="setting-image">
+        <img src="./pdf/dida/dida_02.png" alt="Dida Setting 2" class="setting-image">
+        <img src="./pdf/dida/dida_03.png" alt="Dida Setting 3" class="setting-image">
+        <img src="./pdf/dida/dida_04.png" alt="Dida Setting 4" class="setting-image">
+        <img src="./pdf/dida/dida_05.png" alt="Dida Setting 5" class="setting-image">
+        <img src="./pdf/dida/dida_06.png" alt="Dida Setting 6" class="setting-image">
+        <img src="./pdf/dida/dida_07.png" alt="Dida Setting 7" class="setting-image">
+        <img src="./pdf/dida/dida_08.png" alt="Dida Setting 8" class="setting-image">
+        <img src="./pdf/dida/dida_09.png" alt="Dida Setting 9" class="setting-image">
+        <img src="./pdf/dida/dida_10.png" alt="Dida Setting 10" class="setting-image">
+        <img src="./pdf/dida/dida_11.png" alt="Dida Setting 11" class="setting-image">
+    </div>
+</body>
+</html>

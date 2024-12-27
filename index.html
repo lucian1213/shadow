@@ -10,15 +10,20 @@
             padding: 0;
             width: 100%;
             height: 100%;
+            overflow: hidden; /* 스크롤바 제거 */
         }
 
         body {
             background-image: url('./images/background.png');
-            background-position: center;
+            background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain; /* cover 대신 contain으로 변경 */
             background-attachment: fixed;
             min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black; /* 이미지 외 영역의 배경색 */
         }
     </style>
 </head>

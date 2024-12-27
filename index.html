@@ -10,23 +10,65 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* 스크롤바 제거 */
+            overflow: hidden;
         }
 
-        body {
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
             background-image: url('./images/background.png');
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: contain; /* cover 대신 contain으로 변경 */
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black; /* 이미지 외 영역의 배경색 */
+            background-size: contain;
+            background-color: black;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 검은색 오버레이, 0.5는 투명도 (조절 가능) */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
+    <div class="background-container">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
+    </div>
+    
+    <div class="content">
+        <h1>환영합니다</h1>
+        <p>여기에 원하는 텍스트를 입력하세요</p>
+    </div>
 </body>
 </html>

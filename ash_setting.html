@@ -132,23 +132,33 @@
             </div>
         </div>
 <style>
+body {
+    background: url('./images/background.png') no-repeat center top;
+    background-size: 100% auto;
+    background-color: black;
+}
+
 .custom-pre {
-   font-family: 'Gowun Batang', serif; 
-   color: white;
-   white-space: pre-wrap;
-   word-wrap: break-word;
-   width: 30%;
-   margin-left: 35%;
-   text-align: left;
-   line-height: 1.8; 
+    font-family: 'Gowun Batang', serif; 
+    color: white;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 30%;
+    margin-left: 35%;
+    text-align: left;
+    line-height: 1.8;
 }
 
 @media screen and (max-width: 768px) {
-   .custom-pre {
-       width: 102%;
-       margin-left: -1%;
-       font-size: 0.9em;
-   }
+    body {
+        background-size: cover;
+        min-height: 100vh;
+    }
+    .custom-pre {
+        width: 102%;
+        margin-left: -1%;
+        font-size: 0.9em;
+    }
 }
 </style>
 

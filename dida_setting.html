@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dida 설정서</title>
+    <title>머더미스터리 그림자찾기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
+            font-family: 'Gowun Batang', serif;
             background: url('./images/background.png') no-repeat center top fixed;
             background-size: contain;
             background-color: black;
@@ -24,52 +26,109 @@
             z-index: 0;
         }
 
-        .setting-container {
+        .content {
             position: relative;
             z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.6em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            font-size: 1.0em;
+            line-height: 1.8;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-bottom: 2em;
+        }
+
+        .image-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
             padding: 20px;
+            width: 90%;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .setting-image {
-            width: 90%;
-            max-width: 800px;
+        .character-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .image-item {
+            width: 70%;
+            max-width: 420px;
             height: auto;
             border-radius: 10px;
+            transition: transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        @media screen and (max-width: 1024px) {
-            .setting-image {
-                max-width: 600px;
+        .image-item:hover {
+            transform: scale(1.02);
+        }
+
+        .setting-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-family: 'Gowun Batang', serif;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .setting-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .image-item {
+                max-width: 420px;
             }
         }
 
-        @media screen and (max-width: 768px) {
-            .setting-image {
-                max-width: 400px;
+        @media screen and (max-width: 1023px) {
+            .image-item {
+                max-width: 380px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .image-item {
+                max-width: 320px;
+            }
+            .image-container {
+                gap: 20px;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
-    <div class="setting-container">
-        <img src="./pdf/dida/dida_01.png" alt="Dida Setting 1" class="setting-image">
-        <img src="./pdf/dida/dida_02.png" alt="Dida Setting 2" class="setting-image">
-        <img src="./pdf/dida/dida_03.png" alt="Dida Setting 3" class="setting-image">
-        <img src="./pdf/dida/dida_04.png" alt="Dida Setting 4" class="setting-image">
-        <img src="./pdf/dida/dida_05.png" alt="Dida Setting 5" class="setting-image">
-        <img src="./pdf/dida/dida_06.png" alt="Dida Setting 6" class="setting-image">
-        <img src="./pdf/dida/dida_07.png" alt="Dida Setting 7" class="setting-image">
-        <img src="./pdf/dida/dida_08.png" alt="Dida Setting 8" class="setting-image">
-        <img src="./pdf/dida/dida_09.png" alt="Dida Setting 9" class="setting-image">
-        <img src="./pdf/dida/dida_10.png" alt="Dida Setting 10" class="setting-image">
-        <img src="./pdf/dida/dida_11.png" alt="Dida Setting 11" class="setting-image">
-    </div>
+    <div class="content">
+        <h1>머더미스터리 그림자찾기</h1>
+        <h1>사전 인물 설정서 페이지</h1>
+        <br>
+        <p>※본인이 맡은 캐릭터의 설정서만 확인합니다.</p>
+
+
 </body>
 </html>
